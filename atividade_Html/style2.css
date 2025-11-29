@@ -1,0 +1,164 @@
+:root {
+    --bg-color:#FFFBF2;
+    --sidebar-bg:#FDEEDC;
+    --text-primary:#5D4037;
+    --text-secondary: #8D6E63;
+    --color1: #e6a57e; /* Cobre Claro / Terracota */
+    --color2: #dbc1ac; /* Bege/Cinza Claro */
+    --link-color: #BF7E5D; /* Marrom Médio */
+    --link-hover: #8C5638; /* Marrom Escuro */
+}
+
+/* Reset básico e tipografia */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura */
+}
+
+body {
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-color);
+    /* Centraliza o conteúdo principal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estrutura Principal do Cadastro */
+.cadastro-container {
+    width: 100%;
+    max-width: 600px; /* Limita a largura do formulário */
+    padding: 20px;
+    margin: 40px auto;
+}
+
+.cadastro {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(93, 64, 55, 0.1); /* Sombra mais destacada */
+}
+
+/* Títulos */
+h1 {
+    font-size: 2.5rem; /* Ajustado para se adequar melhor */
+    font-weight: 700;
+    margin-bottom: 0.2em;
+    color: var(--text-primary); /* Alterado para a cor principal do texto para contraste */
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin: 20px 0 10px 0;
+    border-bottom: 3px solid var(--color1);
+    display: inline-block;
+    padding-bottom: 5px;
+    color: var(--link-color);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--color2);
+}
+
+/* Estilo do Formulário */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-secondary);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color2);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: var(--color1);
+    outline: none;
+    box-shadow: 0 0 5px rgba(230, 165, 126, 0.5);
+}
+
+/* Estilo dos Botões */
+.botoes {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end; /* Alinha os botões à direita */
+}
+
+.botoes input[type="submit"],
+.botoes button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Botão Principal: Enviar */
+.botoes input[type="submit"] {
+    background-color: var(--link-color);
+    color: white;
+}
+
+.botoes input[type="submit"]:hover {
+    background-color: var(--link-hover);
+}
+
+/* Botão Secundário: Voltar/Reset */
+.botoes button {
+    background-color: var(--color2);
+    color: var(--text-primary);
+}
+
+.botoes button:hover {
+    background-color: var(--color1);
+    color: white;
+}
+
+/* Rodapé */
+.rodape {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto; /* Empurra o rodapé para o final da página */
+    border-top: 1px solid var(--color2);
+    color: var(--text-secondary);
+    background-color: white;
+}
+
+footer {
+    display: block; /* Remove o display: flex para não interferir no alinhamento */
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}

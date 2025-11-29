@@ -1,0 +1,199 @@
+:root {
+    --bg-color:#FFFBF2;
+    --sidebar-bg:#FDEEDC;
+    --text-primary:#5D4037;
+    --text-secondary: #8D6E63;
+    --color1: #e6a57e;
+    --color2: #dbc1ac;
+    --link-color: #BF7E5D;
+    --link-hover: #8C5638;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font: 75% georgia, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-color);
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+    color: var(--color1);
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: italic;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color2);
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 40px 0 10px 0;
+    border-bottom: 3px solid var(--color2);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+p {
+    margin-bottom: 1.5em;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    color: #245a56;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: var(--link-hover);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 30px rgba(93, 64, 55, 0.08);
+    min-height: 100vh;
+}
+
+.page {
+    flex: 3;
+    padding: 40px;
+    background-color: var(--bg-color);
+}
+
+.sidebar {
+    flex: 1;
+    background-color: var(--sidebar-bg);
+    padding: 40px;
+    min-width: 250px;
+}
+
+.sidebar .wrapper {
+    position: sticky;
+    top: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    border-bottom: none;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.sidebar il {
+    margin-bottom: 8px;
+}
+
+.sidebar a.receita-name, .sidebar a{
+    display: block;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-weight: 400;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.sidebar a:hover {
+    background-color: #ffffff;
+    color: var(--link-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transform: translateX(5px);
+}
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer a {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+footer a:link, footer a:visited {
+    margin: 20px 20px 0 0;
+}
+
+
+/* Responsividade (mobile) */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .page {
+        padding: 20px;
+    }
+
+    .sidebar {
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+
+}
+
